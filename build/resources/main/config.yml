@@ -1,0 +1,21 @@
+# The AntiVPN Config by NedHuman
+
+# If the plugin should block data center IPs
+block-data-center: true
+# If the plugin should block VPNs
+block-vpn: true
+# If the plugin should block open proxies
+block-proxy: true
+
+# If pings by VPNs should be blocked aswell
+# Requires PacketEvents
+block-ping: false
+
+# If players with the advancedantivpn.notify permission should be notified in chat about connection attempts made with VPNs
+notify-chat: true
+
+# If an unhandled error occurs during checking the IP, should we let them in, or kick them out?
+let-in-during-exception: true
+
+# A list of additional IPs to block
+blocked-ips: []

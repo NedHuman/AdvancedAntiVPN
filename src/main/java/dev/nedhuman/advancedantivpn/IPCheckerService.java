@@ -62,6 +62,8 @@ public final class IPCheckerService {
         try {
             URL url = new URL(IP_URL+ip);
             HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(3000);
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String input = in.readLine();
 

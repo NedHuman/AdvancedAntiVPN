@@ -12,7 +12,7 @@ block-proxy: true
 block-ping: false
 
 # If players with the advancedantivpn.notify permission should be notified in chat about connection attempts made with VPNs
-notify-chat: true
+notify-chat: false
 
 # If an unhandled error occurs during checking the IP, should we let them in, or kick them out?
 let-in-during-exception: true

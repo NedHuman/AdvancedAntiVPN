@@ -7,7 +7,5 @@ description: Plugin which aims to block proxies from your server
 softdepend:
   - packetevents
 permissions:
-  advancedantivpn.bypass:
-    description: Bypass the VPN blocker
   advancedantivpn.notify:
     description: Be notified in chat about players attempting to connect with a VPN

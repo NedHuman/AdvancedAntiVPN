@@ -9,12 +9,8 @@ public class Utils {
 
     private Utils() {}
 
-    public static boolean bypassesAntiVPN(Player player) {
-        return player.hasPermission("advancedantivpn.bypass");
-    }
-
-    public static TextComponent getMessage(Player player, IPCheckerService.Result result) {
-        TextComponent message = new TextComponent(ChatColor.DARK_RED+"[!] "+ChatColor.RED+ player.getName()+" attempted to connect with a forbidden VPN");
+    public static TextComponent getMessage(String player, IPCheckerService.Result result) {
+        TextComponent message = new TextComponent(ChatColor.DARK_RED+"[!] "+ChatColor.RED+ player+" attempted to connect with a forbidden VPN");
         String isp = "";
         if(result.isp() != null) {
             isp = ChatColor.YELLOW+"\nISP: "+ChatColor.GOLD+ result.isp();

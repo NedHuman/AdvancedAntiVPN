@@ -1,6 +1,6 @@
 package dev.nedhuman.advancedantivpn;
 
-import dev.nedhuman.advancedantivpn.listener.PlayerLoginListener;
+import dev.nedhuman.advancedantivpn.listener.PlayerPreJoinListener;
 import dev.nedhuman.advancedantivpn.listener.ServerPingListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -36,12 +36,12 @@ public final class AdvancedAntiVPN extends JavaPlugin {
                 .setLetInDuringError(letinDuringError);
         checkerService.getBlockedIpCache().addAll(additionalIps);
 
-        getServer().getPluginManager().registerEvents(new PlayerLoginListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerPreJoinListener(), this);
 
         if(blockPing) {
             if(getServer().getPluginManager().getPlugin("packetevents") != null) {
                 ServerPingListener.init();
-            }else{
+            } else {
                 getLogger().warning("It seems block-ping has been set to true in the config, however PacketEvents is not installed. Ignoring.");
             }
         }

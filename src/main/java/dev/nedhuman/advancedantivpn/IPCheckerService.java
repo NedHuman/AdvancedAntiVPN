@@ -49,6 +49,9 @@ public final class IPCheckerService {
         this.letInDuringError = letInDuringError;
         return this;
     }
+    public Set<String> getGoodIpCache() {
+        return goodIpCache;
+    }
 
     public Result check(String ip) {
 

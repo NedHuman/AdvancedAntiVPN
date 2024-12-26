@@ -19,3 +19,6 @@ let-in-during-exception: true
 
 # A list of additional IPs to block
 blocked-ips: []
+
+# A list of whitelisted IPs
+whitelisted-ips: []

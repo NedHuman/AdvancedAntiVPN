@@ -25,6 +25,7 @@ public final class AdvancedAntiVPN extends JavaPlugin {
         boolean blockProxy = getConfig().getBoolean("block-proxy", true);
         boolean letinDuringError = getConfig().getBoolean("let-in-during-exception", true);
         List<String> additionalIps = getConfig().getStringList("blocked-ips");
+        List<String> whitelistedIps = getConfig().getStringList("whitelisted-ips");
 
         boolean blockPing = getConfig().getBoolean("block-ping");
         notifyChat = getConfig().getBoolean("notify-chat", true);
@@ -35,6 +36,7 @@ public final class AdvancedAntiVPN extends JavaPlugin {
                 .setBlockProxy(blockProxy)
                 .setLetInDuringError(letinDuringError);
         checkerService.getBlockedIpCache().addAll(additionalIps);
+        checkerService.getGoodIpCache().addAll(whitelistedIps);
 
         getServer().getPluginManager().registerEvents(new PlayerPreJoinListener(), this);
 

@@ -31,5 +31,10 @@
       <option name="name" value="codemc-releases" />
       <option name="url" value="https://repo.codemc.io/repository/maven-releases/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="spigot-repo" />
+      <option name="name" value="spigot-repo" />
+      <option name="url" value="https://hub.spigotmc.org/nexus/content/repositories/snapshots/" />
+    </remote-repository>
   </component>
 </project>
